@@ -7,7 +7,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-        HRDC Maintenance Project        
+        HRDC Maintenance Project:    
+        <a href="https://drive.google.com/drive/folders/1qWVm6Xe8ve1HD6e8pMTBeJlDcOa4pRGA">Documentation</a>     
         </p>
         <a
           className="App-link"
