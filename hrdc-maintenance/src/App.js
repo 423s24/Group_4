@@ -1,25 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Form from './Form';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        HRDC Maintenance Project:    
-        <a href="https://drive.google.com/drive/folders/1qWVm6Xe8ve1HD6e8pMTBeJlDcOa4pRGA">Documentation</a>     
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-            HRDC Maintenance Project
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <body>
+          <Router>
+            <div className="content">
+              <Routes>
+                <Route path="/" element={<Form />} />
+              </Routes>
+            </div>
+          </Router>
+        </body>
+      </div>
   );
 }
 
