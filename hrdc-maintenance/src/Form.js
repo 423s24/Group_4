@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
-//npm install --save @emailjs/browser
 
 const Form = () => {
 
@@ -37,6 +34,7 @@ const Form = () => {
     event.target.reset();
   };
 
+
   return (
     <div className="form-container">
       <h2>Contact Us</h2>
@@ -45,7 +43,7 @@ const Form = () => {
           <label htmlFor="name">Name:</label>
           <input
             type="text"
-            id="name"
+            placeholder ="Name"
             name="name"
             required
             className="form-control"
@@ -54,8 +52,9 @@ const Form = () => {
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
+
             type="email"
-            id="email"
+            placeholder ="Email"
             name="email"
             required
             className="form-control"
@@ -65,9 +64,11 @@ const Form = () => {
           <label htmlFor="message">Message:</label>
           <textarea
             id="message"
+            placeholder='Your message'
             name="message"
             required
             className="form-control"
+
           />
         </div>
         <button type="submit" className="submit-btn">Submit</button>
