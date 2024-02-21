@@ -25,10 +25,10 @@ const Form = () => {
   };
 
   return (
-    <div>
-      <h2>Form Component</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
+    <div className="form-container">
+      <h2>Contact Us</h2>
+      <form onSubmit={handleSubmit} className="form">
+        <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -37,9 +37,10 @@ const Form = () => {
             value={formData.name}
             onChange={handleInputChange}
             required
+            className="form-control"
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -48,9 +49,10 @@ const Form = () => {
             value={formData.email}
             onChange={handleInputChange}
             required
+            className="form-control"
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="message">Message:</label>
           <textarea
             id="message"
@@ -58,12 +60,14 @@ const Form = () => {
             value={formData.message}
             onChange={handleInputChange}
             required
+            className="form-control"
           />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-btn">Submit</button>
       </form>
     </div>
   );
 };
 
 export default Form;
+
