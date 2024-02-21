@@ -1,4 +1,4 @@
-
+import emailjs from '@emailjs/browser';
 const Form = () => {
 
   const handleSubmit = (event) => {
@@ -8,18 +8,16 @@ const Form = () => {
     const templateId = 'template_50urqwe';
     const publicKey1 = 'vgmAdf6X-pKROAEsk';
   
-    // Capture form data
     const formData = {
       name: event.target.name.value,
       email: event.target.email.value,
       message: event.target.message.value
     };
   
-    // Send form data along with EmailJS
     emailjs
       .sendForm(serviceId, templateId, event.target, {
         publicKey: publicKey1,
-        name: formData.name, // Include the name here
+        name: formData.name,
       })
       .then(
         () => {
@@ -30,7 +28,6 @@ const Form = () => {
         },
       );
   
-    // Reset the form after submission
     event.target.reset();
   };
 
