@@ -1,5 +1,3 @@
-import emailjs from '@emailjs/browser';
-//npm install --save @emailjs/browser
 
 const Form = () => {
 
@@ -38,37 +36,46 @@ const Form = () => {
 
 
   return (
-    <div>
-      <h2>Form Component</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
+    <div className="form-container">
+      <h2>Contact Us</h2>
+      <form onSubmit={handleSubmit} className="form">
+        <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
             type="text"
             placeholder ="Name"
             name="name"
+            required
+            className="form-control"
           />
         </div>
-        <div>
-        <label htmlFor="email">Email:</label>
-        <input
+        <div className="form-group">
+          <label htmlFor="email">Email:</label>
+          <input
+
             type="email"
             placeholder ="Email"
             name="email"
+            required
+            className="form-control"
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="message">Message:</label>
           <textarea
             id="message"
             placeholder='Your message'
             name="message"
+            required
+            className="form-control"
+
           />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-btn">Submit</button>
       </form>
     </div>
   );
 };
 
 export default Form;
+
