@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Component for rendering confirmation message after successful form submission
 const ConfirmationPage = () => {
   return (
     <div>
