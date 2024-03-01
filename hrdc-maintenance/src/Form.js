@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import LandingPage from './LandingPage';
+import ConfirmationPage from './ConfirmationPage';
 import emailjs from '@emailjs/browser';
 
-const Form = ({ history }) => {
+const Form = () => {
+  const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
     
@@ -14,19 +17,18 @@ const Form = ({ history }) => {
       email: event.target.email.value,
       message: event.target.message.value
     };
-  
-    emailjs
+      emailjs
       .sendForm(serviceId, templateId, event.target, {
         publicKey: publicKey1,
         name: formData.name,
       })
       .then(
         () => {
-          console.log('SUCCESS');
-          history.push('/confirmation');
+          console.log('SUCCESS!');
+          setSubmitted(true);
         },
         (error) => {
-          console.log('FAILED', error.text);
+          console.log('FAILED...', error.text);
         },
       );
   
@@ -35,39 +37,45 @@ const Form = ({ history }) => {
 
   return (
     <div className="form-container">
-      <h2>Let Us Know About Your Issue</h2>
-      <form onSubmit={handleSubmit} className="form">
-        <div className="form-group">
-          <label htmlFor="name">Your Name:</label>
-          <input
-            type="text"
-            placeholder="Name"
-            name="name"
-            required
-            className="form-control"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Preferred Email:</label>
-          <input
-            type="email"
-            placeholder="Email"
-            name="email"
-            required
-            className="form-control"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="message">Maintenance Request:</label>
-          <textarea
-            id="message"
-            placeholder='Your message'
-            name="message"
-            required
-            className="form-control"
-          />
-        </div>
-        <div className="form-group">
+      {submitted ? (
+        <ConfirmationPage />
+      ) : (
+        <>
+          <LandingPage />
+          <h2>Contact Us</h2>
+          <form onSubmit={handleSubmit} className="form">
+            <div className="form-group">
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                required
+                className="form-control"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                required
+                className="form-control"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message:</label>
+              <textarea
+                id="message"
+                placeholder="Your message"
+                name="message"
+                required
+                className="form-control"
+              />
+            </div>
+            <button type="submit" className="submit-btn">Submit</button>
+            <div className="form-group">
           <label htmlFor="options">Select Your Property:</label>
           <select name="options" id="options" className="form-control">
             <option value="Option 1">Property 1</option>
@@ -75,8 +83,9 @@ const Form = ({ history }) => {
             <option value="Option 3">Property 3</option>
           </select>
         </div>
-        <button type="submit" className="submit-btn">Submit</button>
-      </form>
+          </form>
+        </>
+      )}
     </div>
   );
 };
