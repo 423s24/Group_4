@@ -1,6 +1,7 @@
 {
-  "name": "hrdc-maintenance",
+  "name": "test-pages",
   "version": "0.1.0",
+  "homepage": "https://fphillips22.github.io/test-pages",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
@@ -14,10 +15,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
     "predeploy": "npm run build",
+    "start": "react-scripts start",
     "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
