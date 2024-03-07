@@ -1,0 +1,15 @@
+/* LandingPage.css */
+.landing-page {
+    text-align: center;
+    padding: 20px;
+    background-color: #107178;
+    color: #FFFFFF; /* Text color */
+  }
+  
+  .landing-page h1 {
+    color: #003E52; /* Title color */
+  }
+  
+  .landing-page p {
+    margin-bottom: 10px;
+  }  

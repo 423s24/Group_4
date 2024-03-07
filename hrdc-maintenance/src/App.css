@@ -1,7 +1,13 @@
+/* App.css */
+/* Existing styles */
 .App {
   text-align: center;
+  padding: 20px;
+  background-color: #003E52; /* New background color */
+  color: #FFFFFF; /* New text color */
 }
 
+/* Existing styles */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,7 +20,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #282c34; /* Existing background color */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +41,35 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Footer styling */
+.footer {
+  background-color: #107178;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: center;
+}
+
+.footer .footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .footer-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer .footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer .footer-links a:hover {
+  text-decoration: underline;
 }

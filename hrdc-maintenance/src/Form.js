@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Form.css'; // Import the CSS file for Form component
 import LandingPage from './LandingPage';
 import ConfirmationPage from './ConfirmationPage';
 import emailjs from '@emailjs/browser';

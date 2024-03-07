@@ -1,0 +1,23 @@
+/* ConfirmationPage.css */
+.confirmation-container {
+    min-height: 100vh; /* Ensure the container spans the entire viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .confirmation-page {
+    text-align: center;
+    padding: 20px;
+    background-color: #003E52;
+    color: #FFFFFF; /* Text color */
+  }
+  
+  .confirmation-page h1 {
+    color: #107178; /* Title color */
+  }
+  
+  .confirmation-page p {
+    margin-bottom: 10px;
+  }
+  
