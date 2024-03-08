@@ -76,14 +76,24 @@ const Form = () => {
             </div>
             <button type="submit" className="submit-btn">Submit</button>
             <div className="form-group">
-          <label htmlFor="options">Select Your Property:</label>
-          <select name="options" id="options" className="form-control">
-            <option value="Option 1">Property 1</option>
-            <option value="Option 2">Property 2</option>
-            <option value="Option 3">Property 3</option>
-          </select>
-        </div>
+              <label htmlFor="options">Select Your HRDC Property:</label>
+              <select name="options" id="options" className="form-control">
+              <option value="Option 1">Select A Property</option>
+                <option value="Option 2">32. S Tracy (Downtown Office) </option>
+                <option value="Option 3">Market Place</option>
+                <option value="Option 4">Fork and Spoon</option>
+                <option value="Option 5">Gallatin Valley Food Bank</option>
+                <option value="Option 6">Warming Center Bozeman</option>
+                <option value="Option 7">Warming Center Livingston</option>
+                <option value="Option 8">Bozeman Head Start Center</option>
+                <option value="Option 9">Belgrade Head Start Center</option>
+                <option value="Option 10">Livingston Head Start Center</option>
+                <option value="Option 11">Livingston Office</option>
+
+              </select>
+            </div>
           </form>
+          <a href="https://github.com/423s24/Group_4/blob/main/ESOF%20423%20User%20Documentation.pdf" target="_blank" rel="noopener noreferrer" className="help-link">Need Help Filling it Out?</a>
         </>
       )}
     </div>
