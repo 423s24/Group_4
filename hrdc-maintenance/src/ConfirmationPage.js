@@ -15,6 +15,7 @@ const ConfirmationPage = () => {
   );
 };
 
+
 const styles = {
   background: {
     background: 'linear-gradient(135deg, #2ecc71, #27ae60)',
