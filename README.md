@@ -34,3 +34,6 @@ Have someone verify the branch on github website, delete the remote branches aft
 ## get new updates
 * `git pull`
 
+## Important Links/Artifacts 
+- [Product Backlog](https://docs.google.com/spreadsheets/d/1jTkQQElSazBe7eid2eh7Lw_Y30YSGfxN8mrolGUd4xc/edit#gid=1491799557)
+- [Burndown Chart](https://docs.google.com/spreadsheets/d/13U9eq8oPopT9eX9g4MBpYSw1lpk26x2C/edit#gid=267286025)
