@@ -8,9 +8,8 @@ const ConfirmationPage = () => {
         <h1 style={styles.heading}>Thank You!</h1>
         <p style={styles.paragraph}>Your maintenance request form has been submitted successfully.</p>
         <p style={styles.paragraph}>We'll review your request and get back to you soon.</p>
+        <a href="https://thehrdc.org/housing/" target="_blank" rel="noopener noreferrer" className="help-link">HRDC Website</a>
       </div>
-      <a href="https://thehrdc.org/housing/" target="_blank" rel="noopener noreferrer" className="help-link">HRDC Website</a>
-
     </div>
   );
 };
