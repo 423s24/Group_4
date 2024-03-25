@@ -80,8 +80,8 @@ const Form = () => {
             </div>
             <div className="form-group">
               <label htmlFor="options">Select Your HRDC Property:</label>
-              <select name="options" id="options" className="form-control">
-              <option value="Select A Property">Select A Property</option>
+              <select name="options" id="options" className="form-control" required>
+                <option disabled selected hidden></option>
                 <option value="32. S Tracy (Bozeman Downtown Office)">32. S Tracy (Downtown Office) </option>
                 <option value="Livingston Office">Livingston Office</option>
                 <option value="Market Place">Market Place</option>
@@ -96,8 +96,8 @@ const Form = () => {
             </div>
             <div className="form-group">
               <label htmlFor="category">Maintenance Category:</label>
-              <select name="category" id="category" className="form-control">
-                <option value="Select a Category">Select A Category</option>
+              <select name="category" id="category" className="form-control" required>
+                <option disabled selected hidden></option>
                 <option value="Building (walls, doors, etc.)">Building (walls, doors, etc.) </option>
                 <option value="Plumbing (showers, bathrooms, etc.)">Plumbing (showers, bathrooms, etc.)</option>
                 <option value="Technology (phone, wifi, etc.)">Technology (phone, wifi, etc.)</option>
@@ -107,18 +107,19 @@ const Form = () => {
             </div>
             <div className="form-group">
               <label htmlFor="urgency">Urgency:</label>
-              <select name="urgency" id="urgency" className="form-control">
-                <option value="Select Urgency">Select Urgency:</option>
-                <option value="5 (Very High)">5 (Very High)</option>
-                <option value="4 (High)">4 (High)</option>
-                <option value="3 (Medium)">3 (Medium)</option>
-                <option value="2 (Low)">2 (Low)</option>
+              <select name="urgency" id="urgency" className="form-control" required>
+                <option disabled selected hidden></option>
                 <option value="1 (Very Low)">1 (Very Low)</option>
+                <option value="2 (Low)">2 (Low)</option>
+                <option value="3 (Medium)">3 (Medium)</option>
+                <option value="4 (High)">4 (High)</option>
+                <option value="5 (Very High)">5 (Very High)</option>
               </select>
             </div>
             <div className="form-group">
               <label htmlFor="keyIn">Permission for maintenance to key into your unit?</label>
-              <select name="keyIn" id="keyIn" className="form-control">
+              <select name="keyIn" id="keyIn" className="form-control" required>
+                <option disabled selected hidden></option>
                 <option value="No">No</option>
                 <option value="Yes">Yes</option>
                 <option value="Permission not needed">Permission not needed (For HRDC Buildings)</option>
