@@ -1,11 +1,16 @@
 /* App.css */
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 0;
   padding: 20px;
-  background-color: #f5f5f5;
+  background-image: url( 'Vines.svg' ),url('hrdc-logo.png');
+  background-attachment: fixed;
+  background-position: center, left top;
+  background-repeat: no-repeat;
+  background-size: cover, 400px;
 }
+
 
 .container {
   max-width: 600px;
@@ -36,21 +41,34 @@ body {
   margin-bottom: 20px;
   font-size: 40px;
   color: rgba(48, 100, 98, 1);
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .form-group {
   display: block;
   margin: auto auto 20px auto;
   width: 70%;
+  text-align: left;
+}
+
+.form-group label{
+  transition: all 300ms;
+}
+
+.form-group input {
+  transition: all 300ms;
+}
+
+.form-group textarea {
+  transition: all 300ms;
+}
+
+.form-group select {
+  transition: all 300ms;
 }
 
 .form-group:hover label{
-  transition:font-size 0.3s;
-	-moz-transition:font-size 0.3s; /* Firefox 4 */
-	-webkit-transition:font-size 0.3s; /* Safari and Chrome */
-	-o-transition:font-size 0.3s;
-  font-size: 33px;
+  font-size:38px;
+  font-size-adjust: 20px;
 }
 
 .form-group:hover input{
@@ -62,6 +80,10 @@ textarea{
 }
 
 .form-group:hover textarea{
+  border: 3px solid #008000;
+}
+
+.form-group:hover select{
   border: 3px solid #008000;
 }
 
@@ -83,6 +105,7 @@ textarea{
   border: 1px solid #008000;
   border-radius: 4px;
   box-shadow: black 3px 3px 13px -10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .form-control#message {
@@ -90,18 +113,23 @@ textarea{
 }
 
 .submit-btn {
-  width: 50%;
-  padding: 25px;
+  width: 30%;
+  padding: 10px;
   font-size: 28px;
-  background-color: #008000;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
+  background-color: #fff;
+  color: rgba(48, 100, 98, 1);
+  border: 3px solid rgba(48, 100, 98, 1);
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 300ms;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* Have two images for the background and gradually change the opacity of the top one? */
+
 .submit-btn:hover {
-  background-color: #006400;
+  background-color:rgba(48, 100, 98, 1);
+  color: #fff;
 }
 
 .error-message {
@@ -116,8 +144,16 @@ textarea{
 
 hr {
   width: 70%;
-  border-color: #006400;
+  border-color: #008000;
   border-width: 1px;
   border-radius: 10px;
-  margin: 10px auto 10px auto;
+  margin: 40px auto 40px auto;
+}
+
+#user-doc-button {
+  font-size: 18px;
+}
+
+.landingPageText {
+  color:rgba(48, 100, 98, 1)
 }
