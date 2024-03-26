@@ -46,10 +46,8 @@ const Form = () => {
       ) : (
         <>
           <LandingPage />
-          <hr></hr>
-          <a href="https://github.com/423s24/Group_4/blob/main/ESOF%20423%20User%20Documentation.pdf" target="_blank" rel="noreferrer">
-          <button id="user-doc-button" class="submit-btn">Need help filling out this form?</button>
-          </a>
+          <a href="https://github.com/423s24/Group_4/blob/main/ESOF%20423%20User%20Documentation.pdf" target="_blank" rel="noopener noreferrer" className="help-link">Need Help Filling it Out?</a>
+          <h2>Contact Us</h2>
           <form onSubmit={handleSubmit} className="form">
             <div className="form-group">
               <label htmlFor="name">Name:</label>
@@ -83,8 +81,8 @@ const Form = () => {
             </div>
             <div className="form-group">
               <label htmlFor="options">Select Your HRDC Property:</label>
-              <select required name="options" id="options" className="form-control">
-                <option disabled selected hidden value=""></option>
+              <select name="options" id="options" className="form-control">
+              <option value="Select A Property">Select A Property</option>
                 <option value="32. S Tracy (Bozeman Downtown Office)">32. S Tracy (Downtown Office) </option>
                 <option value="Livingston Office">Livingston Office</option>
                 <option value="Market Place">Market Place</option>
@@ -99,8 +97,8 @@ const Form = () => {
             </div>
             <div className="form-group">
               <label htmlFor="category">Maintenance Category:</label>
-              <select required name="category" id="category" className="form-control">
-                <option disabled selected hidden value=""></option>
+              <select name="category" id="category" className="form-control">
+                <option value="Select a Category">Select A Category</option>
                 <option value="Building (walls, doors, etc.)">Building (walls, doors, etc.) </option>
                 <option value="Plumbing (showers, bathrooms, etc.)">Plumbing (showers, bathrooms, etc.)</option>
                 <option value="Technology (phone, wifi, etc.)">Technology (phone, wifi, etc.)</option>
@@ -110,26 +108,24 @@ const Form = () => {
             </div>
             <div className="form-group">
               <label htmlFor="urgency">Urgency:</label>
-              <select required name="urgency" id="urgency" className="form-control">
-                <option required disabled selected hidden value=""></option>
-                <option value="1 (Very Low)">1 (Very Low)</option>
-                <option value="2 (Low)">2 (Low)</option>
-                <option value="3 (Medium)">3 (Medium)</option>
-                <option value="4 (High)">4 (High)</option>
+              <select name="urgency" id="urgency" className="form-control">
+                <option value="Select Urgency">Select Urgency:</option>
                 <option value="5 (Very High)">5 (Very High)</option>
+                <option value="4 (High)">4 (High)</option>
+                <option value="3 (Medium)">3 (Medium)</option>
+                <option value="2 (Low)">2 (Low)</option>
+                <option value="1 (Very Low)">1 (Very Low)</option>
               </select>
             </div>
             <div className="form-group">
-              <label htmlFor="keyIn">Permission for maintenance <br></br> to key into your unit?</label>
-              <select required name="keyIn" id="keyIn" className="form-control">
-                <option required disabled selected hidden value=""></option>
+              <label htmlFor="keyIn">Permission for maintenance to key into your unit?</label>
+              <select name="keyIn" id="keyIn" className="form-control">
                 <option value="No">No</option>
                 <option value="Yes">Yes</option>
                 <option value="Permission not needed">Permission not needed (For HRDC Buildings)</option>
               </select>
             </div>
-            <hr></hr>
-            <button type="submit" className="submit-btn" id="submitButton">Submit</button>
+            <button type="submit" className="submit-btn">Submit</button>
           </form>
         </>
       )}
