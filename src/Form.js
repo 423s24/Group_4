@@ -46,8 +46,10 @@ const Form = () => {
       ) : (
         <>
           <LandingPage />
-          <a href="https://github.com/423s24/Group_4/blob/main/ESOF%20423%20User%20Documentation.pdf" target="_blank" rel="noopener noreferrer" className="help-link">Need Help Filling it Out?</a>
-          <h2>Contact Us</h2>
+          <hr></hr>
+          <a href="https://github.com/423s24/Group_4/blob/main/ESOF%20423%20User%20Documentation.pdf" target="_blank" rel="noreferrer">
+          <button id="user-doc-button" class="submit-btn">Need help filling out this form?</button>
+          </a>
           <form onSubmit={handleSubmit} className="form">
             <div className="form-group">
               <label htmlFor="name">Name:</label>
@@ -125,6 +127,7 @@ const Form = () => {
                 <option value="Permission not needed">Permission not needed (For HRDC Buildings)</option>
               </select>
             </div>
+            <hr></hr>
             <button type="submit" className="submit-btn">Submit</button>
           </form>
         </>
