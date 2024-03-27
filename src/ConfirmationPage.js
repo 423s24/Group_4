@@ -7,7 +7,9 @@ const ConfirmationPage = () => {
         <h1 style={styles.heading}>Thank You!</h1>
         <p style={styles.paragraph}>Your maintenance request form has been submitted successfully.</p>
         <p style={styles.paragraph}>We'll review your request and get back to you soon.</p>
-        <button style={styles.button} onClick={() => window.open("https://thehrdc.org/housing/", "_blank")}>Visit HRDC Website</button>
+      
+        <button style={styles.button} onClick={() => window.open("https://thehrdc.org/housing/")}>Visit HRDC Website</button>
+        <p style={styles.paragraph}>You can close this tab.</p>
       </div>
     </div>
   );
