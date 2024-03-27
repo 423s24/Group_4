@@ -124,7 +124,7 @@ const Form = () => {
               <select name="keyIn" id="keyIn" className="form-control">
                 <option value="No">No</option>
                 <option value="Yes">Yes</option>
-                <option value="Permission not needed">Permission not needed (For HRDC Buildings)</option>
+                <option value="Permission not needed">Permission not needed (For HRDC Facilities)</option>
               </select>
             </div>
             <hr></hr>
