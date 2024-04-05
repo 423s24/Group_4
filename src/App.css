@@ -1,22 +1,18 @@
-/* App.css */
-
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 0;
   padding: 20px;
-  background-image: url( 'Vines.svg' ),url('hrdc-logo.png');
+  background-image: url('Vines.svg'), url('hrdc-logo.png');
   background-attachment: fixed;
   background-position: center, left top;
   background-repeat: no-repeat;
   background-size: cover, 400px;
 }
 
-
 .container {
   max-width: 600px;
   margin: 50px auto;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 20px;
   background-color: #f0fff0;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -25,7 +21,6 @@ body {
 .form-container {
   padding: 20px;
   text-align: center;
-  display: block;
   margin: auto;
   box-shadow: black 3px 0px 25px -8px;
   border-radius: 10px;
@@ -50,47 +45,6 @@ body {
   text-align: left;
 }
 
-.form-group label{
-  transition: all 300ms;
-}
-
-.form-group input {
-  transition: all 300ms;
-}
-
-.form-group textarea {
-  transition: all 300ms;
-}
-
-.form-group select {
-  transition: all 300ms;
-}
-
-.form-group:hover label{
-  font-size:38px;
-  font-size-adjust: 20px;
-}
-
-.form-group:hover input{
-  border: 3px solid #008000;
-}
-
-textarea{
-  border: none;
-}
-
-.form-group:hover textarea{
-  border: 3px solid #008000;
-}
-
-.form-group:hover select{
-  border: 3px solid #008000;
-}
-
-.field-title {
-  text-align: left;
-}
-
 .form-group label {
   display: block;
   font-size: 28px;
@@ -99,7 +53,7 @@ textarea{
 }
 
 .form-control {
-  width: 100%;
+  width: 100% !important; /* Set width to 100% for consistent width */
   padding: 10px;
   font-size: 16px;
   border: 1px solid #008000;
@@ -125,8 +79,6 @@ textarea{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* Have two images for the background and gradually change the opacity of the top one? */
-
 .submit-btn:hover {
   background-color:rgba(48, 100, 98, 1);
   color: #fff;
@@ -136,10 +88,6 @@ textarea{
   color: #dc3545;
   font-size: 14px;
   margin-top: 5px;
-}
-
-#inputType {
-  text-align: none;
 }
 
 hr {
@@ -156,4 +104,41 @@ hr {
 
 .landingPageText {
   color:rgba(48, 100, 98, 1)
+}
+
+/* Media queries for mobile responsiveness */
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+    margin: 20px auto;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+
+  .form-container h2 {
+    font-size: 30px;
+  }
+
+  .form-group label {
+    font-size: 20px;
+  }
+
+  .form-control {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    font-size: 20px;
+    width: 50%;
+  }
+
+  .error-message {
+    font-size: 12px;
+  }
+
+  hr {
+    width: 90%;
+  }
 }
