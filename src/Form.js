@@ -118,7 +118,7 @@ const Form = () => {
               </select>
             </div>
             <div className="form-group">
-              <label htmlFor="keyIn">Permission for maintenance to key into your unit?</label>
+              <label htmlFor="keyIn">Permission To Key Into Your Unit?</label>
               <select name="keyIn" id="keyIn" className="form-control">
                 <option value="No">No</option>
                 <option value="Yes">Yes</option>
