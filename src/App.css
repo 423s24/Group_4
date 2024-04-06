@@ -9,6 +9,8 @@ body {
   background-position: center, left top;
   background-repeat: no-repeat;
   background-size: cover, 400px;
+  font-size:16.5pt;
+
 }
 
 
@@ -20,9 +22,11 @@ body {
   background-color: #f0fff0;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size:16.5pt;
 }
 
 .form-container {
+  font-size:16.5pt;
   padding: 20px;
   text-align: center;
   display: block;
@@ -48,6 +52,8 @@ body {
   margin: auto auto 20px auto;
   width: 70%;
   text-align: left;
+  font-size:16.5pt;
+
 }
 
 .form-group label{
@@ -55,6 +61,8 @@ body {
 }
 
 .form-group input {
+  font-size:16.5pt;
+
   transition: all 300ms;
 }
 
@@ -110,6 +118,7 @@ textarea{
 
 .form-control#message {
   height: 150px;
+  font-size:16.5pt;
 }
 
 .submit-btn {
