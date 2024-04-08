@@ -8,15 +8,15 @@ const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     
-    const serviceId = 'service_ph5mhet';
-    const templateId = 'template_50urqwe';
-    const publicKey1 = 'vgmAdf6X-pKROAEsk';
+    const serviceId = 'service_ph5mhet'; //EmailJS service_id
+    const templateId = 'template_50urqwe'; //EmailJS template_id
+    const publicKey1 = 'vgmAdf6X-pKROAEsk'; // EmailJS
   
     const formData = {
       name: event.target.name.value,
       email: event.target.email.value,
       message: event.target.message.value,
-      options: event.target.options.value,
+      properties: event.target.properties.value,
       category: event.target.category.value,
       urgency: event.target.urgency.value,
       keyIn: event.target.keyIn.value
@@ -82,9 +82,9 @@ const Form = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="options">Select Your HRDC Property:</label>
-              <select name="options" id="options" className="form-control">
-              <option value="Select A Property">Select A Property</option>
+              <label htmlFor="properties">Select Your HRDC Property:</label>
+              <select name="properties" id="properties" className="form-control" required>
+                <option value="" hidden selected disabled>Select A Property</option>
                 <option value="32. S Tracy (Bozeman Downtown Office)">32. S Tracy (Downtown Office) </option>
                 <option value="Livingston Office">Livingston Office</option>
                 <option value="Market Place">Market Place</option>
@@ -100,8 +100,8 @@ const Form = () => {
             </div>
             <div className="form-group">
               <label htmlFor="category">Maintenance Category:</label>
-              <select name="category" id="category" className="form-control">
-                <option value="Select a Category">Select A Category</option>
+              <select name="category" id="category" className="form-control" required>
+                <option value="" hidden selected disabled>Select A Category</option>
                 <option value="Building (walls, doors, etc.)">Building (walls, doors, etc.) </option>
                 <option value="Plumbing (showers, bathrooms, etc.)">Plumbing (showers, bathrooms, etc.)</option>
                 <option value="Technology (phone, wifi, etc.)">Technology (phone, wifi, etc.)</option>
@@ -111,18 +111,19 @@ const Form = () => {
             </div>
             <div className="form-group">
               <label htmlFor="urgency">Urgency:</label>
-              <select name="urgency" id="urgency" className="form-control">
-                <option value="Select Urgency">Select Urgency:</option>
-                <option value="5 (Very High)">5 (Very High)</option>
-                <option value="4 (High)">4 (High)</option>
-                <option value="3 (Medium)">3 (Medium)</option>
-                <option value="2 (Low)">2 (Low)</option>
+              <select name="urgency" id="urgency" className="form-control" required>
+                <option value="" hidden selected disabled>Select Urgency:</option>
                 <option value="1 (Very Low)">1 (Very Low)</option>
+                <option value="2 (Low)">2 (Low)</option>
+                <option value="3 (Medium)">3 (Medium)</option>
+                <option value="4 (High)">4 (High)</option>
+                <option value="5 (Very High)">5 (Very High)</option>
               </select>
             </div>
             <div className="form-group">
               <label htmlFor="keyIn">Permission To Key Into Your Unit?</label>
-              <select name="keyIn" id="keyIn" className="form-control">
+              <select name="keyIn" id="keyIn" className="form-control" required>
+                <option value="" hidden selected disabled>Select permission:</option>
                 <option value="No">No</option>
                 <option value="Yes">Yes</option>
                 <option value="Permission not needed">Permission not needed (For HRDC Facilities)</option>
