@@ -62,7 +62,6 @@ body {
 
 .form-group input {
   font-size:16.5pt;
-
   transition: all 300ms;
 }
 
@@ -72,6 +71,7 @@ body {
 
 .form-group select {
   transition: all 300ms;
+  font-size: 16.5px;
 }
 
 .form-group:hover label{
