@@ -50,7 +50,17 @@ form{
   margin: auto auto 20px auto;
   width: 100%; /* Ensures uniform width */
   text-align: left;
-  font-size: 16px;
+  font-size:16.5pt;
+
+}
+
+.form-group label{
+  transition: all 300ms;
+}
+
+.form-group input {
+  font-size:16.5pt;
+  transition: all 300ms;
 }
 
 .form-group label {
@@ -62,7 +72,9 @@ form{
 .form-group select {
   transition: all 300ms;
   /* Option 1: Remove !important if previously used */
-  width: calc(100% - 20px); /* Adjust as needed based on padding and border */  
+  width: calc(100% - 20px);
+  font-size: 16.5px;
+  /* Adjust as needed based on padding and border */  
 }
 
 .form-group:hover label {
