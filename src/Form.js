@@ -61,7 +61,7 @@ const Form = () => {
           <hr></hr>
           <button onClick={showUserDocumentation} id="user-doc-button" class="submit-btn">Need help filling out this form?</button>
           <div id="user_documentation" style={{display: 'none'}}>
-            <User_Documentation />
+            <User_Documentation/>
           </div>
           <form onSubmit={handleSubmit} className="form">
             <div className="form-group">
@@ -87,7 +87,7 @@ const Form = () => {
             <div className="form-group">
               <label htmlFor="properties">Select Your HRDC Property:</label>
               <select name="properties" id="properties" className="form-control" required>
-                <option value="" hidden selected disabled>Select A Property</option>
+                <option value="" hidden selected disabled>Select Property:</option>
                 <option value="32. S Tracy (Bozeman Downtown Office)">32. S Tracy (Downtown Office) </option>
                 <option value="Livingston Office">Livingston Office</option>
                 <option value="Market Place">Market Place</option>
@@ -105,7 +105,7 @@ const Form = () => {
             <div className="form-group">
               <label htmlFor="category">Maintenance Category:</label>
               <select name="category" id="category" className="form-control" required>
-                <option value="" hidden selected disabled>Select A Category</option>
+                <option value="" hidden selected disabled>Select Category:</option>
                 <option value="Building (walls, doors, etc.)">Building (walls, doors, etc.) </option>
                 <option value="Plumbing (showers, bathrooms, etc.)">Plumbing (showers, bathrooms, etc.)</option>
                 <option value="Technology (phone, wifi, etc.)">Technology (phone, wifi, etc.)</option>
@@ -127,7 +127,7 @@ const Form = () => {
             <div className="form-group">
               <label htmlFor="keyIn">Permission To Key Into Your Unit?</label>
               <select name="keyIn" id="keyIn" className="form-control" required>
-                <option value="" hidden selected disabled>Select permission:</option>
+                <option value="" hidden selected disabled>Select Permission:</option>
                 <option value="No">No</option>
                 <option value="Yes">Yes</option>
                 <option value="Permission not needed">Permission not needed (For HRDC Facilities)</option>
