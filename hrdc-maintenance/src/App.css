@@ -113,6 +113,7 @@ textarea{
 }
 
 .submit-btn {
+  margin: auto auto 25px auto;
   width: 30%;
   padding: 10px;
   font-size: 28px;
@@ -156,4 +157,11 @@ hr {
 
 .landingPageText {
   color:rgba(48, 100, 98, 1)
+}
+
+#warning {
+  display: block;
+  margin: auto auto 25px auto;
+  width: 70%;
+  font-size: 16.5px;
 }

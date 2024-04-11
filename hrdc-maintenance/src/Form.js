@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import LandingPage from './LandingPage';
 import ConfirmationPage from './ConfirmationPage';
 import emailjs from '@emailjs/browser';
+import User_Documentation from './User_Documentation';
 
 const Form = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -38,6 +39,17 @@ const Form = () => {
   
     event.target.reset();
   };
+  const showUserDocumentation = (event) => {
+    let documentation = document.getElementById("user_documentation");
+    if (documentation.style.display == 'none') {
+      documentation.style.display = "block";
+      documentation.style.textAlign = "left";
+      document.getElementById("user-doc-button").innerText = "I am finished with the instructions!";
+    } else {
+      documentation.style.display = 'none';
+      document.getElementById("user-doc-button").innerText = "Need help filling out this form?";
+    }
+  };
 
   return (
     <div className="form-container">
@@ -47,9 +59,10 @@ const Form = () => {
         <>
           <LandingPage />
           <hr></hr>
-          <a href="https://github.com/423s24/Group_4/blob/main/ESOF%20423%20User%20Documentation.pdf" target="_blank" rel="noreferrer">
-          <button id="user-doc-button" class="submit-btn">Need help filling out this form?</button>
-          </a>
+          <button onClick={showUserDocumentation} id="user-doc-button" class="submit-btn">Need help filling out this form?</button>
+          <div id="user_documentation" style={{display: 'none'}}>
+            <User_Documentation />
+          </div>
           <form onSubmit={handleSubmit} className="form">
             <div className="form-group">
               <label htmlFor="name">Name:</label>
@@ -128,6 +141,7 @@ const Form = () => {
               </select>
             </div>
             <hr></hr>
+            <p id="warning">If your maintanence issue presents an immediate safety hazard (e.g. gas leak, building collapsing, etc.) contact the HRDC main office immediately at <b>(406) 587-4486</b>.</p>
             <button type="submit" className="submit-btn" id="submitButton">Submit</button>
           </form>
         </>
