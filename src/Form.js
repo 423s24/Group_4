@@ -123,7 +123,7 @@ const Form = () => {
                 <option value="Yes">Yes</option>
                 <option value="Permission not needed">Permission not needed (For HRDC Facilities)</option>
               </select>
-            </div>b
+            </div>
 
             <div className="form-group">
               <label htmlFor="message">Message:</label>
