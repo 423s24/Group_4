@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import LandingPage from './LandingPage';
 import ConfirmationPage from './ConfirmationPage';
 import emailjs from '@emailjs/browser';
-import User_Documentation from './User_Documentation';
+import UserDocumentation from './UserDocumentation';
 
 const Form = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -61,7 +61,7 @@ const Form = () => {
           <hr></hr>
           <button onClick={showUserDocumentation} id="user-doc-button" class="submit-btn">Need help filling out this form?</button>
           <div id="user_documentation" style={{display: 'none'}}>
-            <User_Documentation/>
+            <UserDocumentation/>
           </div>
           <form onSubmit={handleSubmit} className="form">
             <div className="form-group">

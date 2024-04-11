@@ -1,6 +1,6 @@
 import React from 'react';
 
-const User_Documentation = () => {
+const UserDocumentation = () => {
     return (
         <div id="user_documentation_text">
             <h1>How To Use This Form</h1>
@@ -13,7 +13,7 @@ const User_Documentation = () => {
             </ul>
             <h3>How to view this page on your computer directly (Not from the HRDC website link)</h3>
             <ul>
-                <li>Go to this <a target="_blank" rel="HRDC maintenence request form" href="https://fphillips22.github.io/test-pages/" title="HRDC Maintenence Request Form">web address</a>.</li>
+                <li>Go to this <a target="_blank" rel="noreferrer" href="https://fphillips22.github.io/test-pages/" title="HRDC Maintenence Request Form">web address</a>.</li>
                 <li>Clicking the above link should result in a new tab opening in your browser. The new tab should contain the webpage displaying the form.</li>
                 <li>That's all! If you fill out the form on the page and click submit, it will submit a maintenance request.</li>
             </ul>
@@ -33,4 +33,4 @@ const User_Documentation = () => {
 
 };
 
-export default User_Documentation;
+export default UserDocumentation;
