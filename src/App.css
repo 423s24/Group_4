@@ -262,3 +262,8 @@ hr {
     margin-top: 15px;
   }
 }
+
+#user_documentation {
+  width: 70%;
+  margin: 60px auto auto auto;
+}
