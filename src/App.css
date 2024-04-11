@@ -3,7 +3,7 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 0;
   padding: 20px;
-  background-image: url('Vines.svg'), url('hrdc-logo.png');
+  background-image: url(trees-03-01.svg), url('hrdc-logo.png');
   background-attachment: fixed;
   background-position: center, left top;
   background-repeat: no-repeat;
@@ -42,7 +42,7 @@ form{
   padding: 0 20px;
   margin-bottom: 20px;
   font-size: 40px;
-  color: rgba(48, 100, 98, 1);
+  color: #107178;
 }
 
 .form-group {
@@ -99,7 +99,7 @@ textarea {
 .form-group label {
   display: block;
   font-size: 28px;
-  color: rgba(48, 100, 98, 1);
+  color: #107178;
   margin-bottom: 8px;
 }
 
@@ -123,8 +123,8 @@ textarea {
   padding: 10px;
   font-size: 28px;
   background-color: #fff;
-  color: rgba(48, 100, 98, 1);
-  border: 3px solid rgba(48, 100, 98, 1);
+  color: #107178;
+  border: 3px solid #107178;
   border-radius: 8px;
   cursor: pointer;
   transition: all 300ms;
@@ -132,7 +132,7 @@ textarea {
 }
 
 .submit-btn:hover {
-  background-color: rgba(48, 100, 98, 1);
+  background-color: #107178;
   color: #fff;
 }
 
@@ -155,7 +155,7 @@ hr {
 }
 
 .landingPageText {
-  color: rgba(48, 100, 98, 1);
+  color: #107178;
 }
 
 /* Media queries for mobile responsiveness */

@@ -61,6 +61,7 @@ const Form = () => {
                 className="form-control"
               />
             </div>
+            
             <div className="form-group">
               <label htmlFor="email">Email:</label>
               <input
@@ -71,16 +72,7 @@ const Form = () => {
                 className="form-control"
               />
             </div>
-            <div className="form-group">
-              <label htmlFor="message">Message:</label>
-              <textarea
-                id="message"
-                placeholder="Your message"
-                name="message"
-                required
-                className="form-control"
-              />
-            </div>
+
             <div className="form-group">
               <label htmlFor="properties">Select Your HRDC Property:</label>
               <select name="properties" id="properties" className="form-control" required>
@@ -98,6 +90,7 @@ const Form = () => {
                 <option value="Homeward Point">Homeward Point</option>
               </select>
             </div>
+
             <div className="form-group">
               <label htmlFor="category">Maintenance Category:</label>
               <select name="category" id="category" className="form-control" required>
@@ -109,6 +102,7 @@ const Form = () => {
                 <option value="Other">Other</option>
               </select>
             </div>
+
             <div className="form-group">
               <label htmlFor="urgency">Urgency:</label>
               <select name="urgency" id="urgency" className="form-control" required>
@@ -120,6 +114,7 @@ const Form = () => {
                 <option value="5 (Very High)">5 (Very High)</option>
               </select>
             </div>
+
             <div className="form-group">
               <label htmlFor="keyIn">Permission To Key Into Your Unit?</label>
               <select name="keyIn" id="keyIn" className="form-control" required>
@@ -129,6 +124,21 @@ const Form = () => {
                 <option value="Permission not needed">Permission not needed (For HRDC Facilities)</option>
               </select>
             </div>
+
+            <div className="form-group">
+              <label htmlFor="message">Message:</label>
+              <textarea
+                id="message"
+                placeholder="Your message"
+                name="message"
+                required
+                className="form-control"
+              />
+            </div>
+
+
+
+
             <hr></hr>
             <button type="submit" className="submit-btn">Submit</button>
           </form>
