@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import LandingPage from './LandingPage';
 import ConfirmationPage from './ConfirmationPage';
 import emailjs from '@emailjs/browser';
+import User_Documentation from './User_Documentation';
 
 const Form = () => {
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
     
-    const serviceId = 'service_ph5mhet'; //EmailJS service_id
-    const templateId = 'template_50urqwe'; //EmailJS template_id
-    const publicKey1 = 'vgmAdf6X-pKROAEsk'; // EmailJS
+    const serviceId = 'service_ph5mhet';
+    const templateId = 'template_50urqwe';
+    const publicKey1 = 'vgmAdf6X-pKROAEsk';
   
     const formData = {
       name: event.target.name.value,
@@ -38,6 +39,17 @@ const Form = () => {
   
     event.target.reset();
   };
+  const showUserDocumentation = (event) => {
+    let documentation = document.getElementById("user_documentation");
+    if (documentation.style.display === 'none') {
+      documentation.style.display = "block";
+      documentation.style.textAlign = "left";
+      document.getElementById("user-doc-button").innerText = "I am finished with the instructions!";
+    } else {
+      documentation.style.display = 'none';
+      document.getElementById("user-doc-button").innerText = "Need help filling out this form?";
+    }
+  };
 
   return (
     <div className="form-container">
@@ -47,9 +59,10 @@ const Form = () => {
         <>
           <LandingPage />
           <hr></hr>
-          <a href="https://github.com/423s24/Group_4/blob/main/ESOF%20423%20User%20Documentation.pdf" target="_blank" rel="noreferrer">
-          <button id="user-doc-button" class="submit-btn">Need help filling out this form?</button>
-          </a>
+          <button onClick={showUserDocumentation} id="user-doc-button" class="submit-btn">Need help filling out this form?</button>
+          <div id="user_documentation" style={{display: 'none'}}>
+            <User_Documentation />
+          </div>
           <form onSubmit={handleSubmit} className="form">
             <div className="form-group">
               <label htmlFor="name">Name:</label>
@@ -61,7 +74,6 @@ const Form = () => {
                 className="form-control"
               />
             </div>
-            
             <div className="form-group">
               <label htmlFor="email">Email:</label>
               <input
@@ -72,7 +84,6 @@ const Form = () => {
                 className="form-control"
               />
             </div>
-
             <div className="form-group">
               <label htmlFor="properties">Select Your HRDC Property:</label>
               <select name="properties" id="properties" className="form-control" required>
@@ -102,7 +113,6 @@ const Form = () => {
                 <option value="Other">Other</option>
               </select>
             </div>
-
             <div className="form-group">
               <label htmlFor="urgency">Urgency:</label>
               <select name="urgency" id="urgency" className="form-control" required>
@@ -114,7 +124,6 @@ const Form = () => {
                 <option value="5 (Very High)">5 (Very High)</option>
               </select>
             </div>
-
             <div className="form-group">
               <label htmlFor="keyIn">Permission To Key Into Your Unit?</label>
               <select name="keyIn" id="keyIn" className="form-control" required>
@@ -140,7 +149,8 @@ const Form = () => {
 
 
             <hr></hr>
-            <button type="submit" className="submit-btn">Submit</button>
+            <p id="warning">If your maintanence issue presents an immediate safety hazard (e.g. gas leak, building collapsing, etc.) contact the HRDC main office immediately at <b>(406) 587-4486</b>.</p>
+            <button type="submit" className="submit-btn" id="submitButton">Submit</button>
           </form>
         </>
       )}
