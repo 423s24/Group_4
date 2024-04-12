@@ -193,6 +193,17 @@ hr {
   hr {
     width: 90%;
   }
+
+  .form-group:hover label {
+    font-size: 22px;
+    font-size-adjust: none;
+  }
+  
+  .form-group:hover input,
+  .form-group:hover textarea,
+  .form-group:hover select {
+    border: 1px solid #008000;
+  }
 }
 
 /* Confirmation Page Styles */
