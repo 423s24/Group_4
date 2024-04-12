@@ -135,7 +135,7 @@ const Form = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="message">Message:</label>
+              <label htmlFor="message">Message (Please include <br></br>your unit address <br></br>in your message):</label>
               <textarea
                 id="message"
                 placeholder="Your message"
