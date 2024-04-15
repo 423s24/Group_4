@@ -57,7 +57,7 @@ email service, changing this will NOT change anything.
 keyword you'd like when the new field is added into Forms.js `return`. You will also need to implement the field into 
 the `formData` constant. Follow the format of `KEYWORD: event.target.KEYWORD.value`. The term 'KEYWORD' is a placeholder
 for whatever you'd like to name your variable.
-5. To see the output of the new field in EmailJS, you need to include the `{{KEYWORD}}` anywhere in the ***Subject*** or
+5. To see the output of the new field in EmailJS, you need to include the `{{{KEYWORD}}}` anywhere in the ***Subject*** or
 ***Content*** textbox. Save your updates and the Email will now include this new input field.
 
 
