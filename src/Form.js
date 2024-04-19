@@ -5,51 +5,52 @@ import emailjs from '@emailjs/browser';
 import UserDocumentation from './UserDocumentation';
 
 const Form = () => {
+
   const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = (event) => {
-    event.preventDefault();
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      
+      const serviceId = 'service_ph5mhet';
+      const templateId = 'template_50urqwe';
+      const publicKey1 = 'vgmAdf6X-pKROAEsk';
     
-    const serviceId = 'service_ph5mhet';
-    const templateId = 'template_50urqwe';
-    const publicKey1 = 'vgmAdf6X-pKROAEsk';
-  
-    const formData = {
-      name: event.target.name.value,
-      email: event.target.email.value,
-      message: event.target.message.value,
-      properties: event.target.properties.value,
-      category: event.target.category.value,
-      urgency: event.target.urgency.value,
-      keyIn: event.target.keyIn.value
+      const formData = {
+        name: event.target.name.value,
+        email: event.target.email.value,
+        message: event.target.message.value,
+        properties: event.target.properties.value,
+        category: event.target.category.value,
+        urgency: event.target.urgency.value,
+        keyIn: event.target.keyIn.value
+      };
+        emailjs
+        .sendForm(serviceId, templateId, event.target, {
+          publicKey: publicKey1,
+          name: formData.name,
+        })
+        .then(
+          () => {
+            console.log('SUCCESS!');
+            setSubmitted(true);
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+          },
+        );
+    
+      event.target.reset();
     };
-      emailjs
-      .sendForm(serviceId, templateId, event.target, {
-        publicKey: publicKey1,
-        name: formData.name,
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          setSubmitted(true);
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-  
-    event.target.reset();
-  };
-  const showUserDocumentation = (event) => {
-    let documentation = document.getElementById("user_documentation");
-    if (documentation.style.display === 'none') {
-      documentation.style.display = "block";
-      documentation.style.textAlign = "left";
-      document.getElementById("user-doc-button").innerText = "I am finished with the instructions!";
-    } else {
-      documentation.style.display = 'none';
-      document.getElementById("user-doc-button").innerText = "Need help filling out this form?";
-    }
-  };
+    const showUserDocumentation = (event) => {
+      let documentation = document.getElementById("user_documentation");
+      if (documentation.style.display === 'none') {
+        documentation.style.display = "block";
+        documentation.style.textAlign = "left";
+        document.getElementById("user-doc-button").innerText = "I am finished with the instructions!";
+      } else {
+        documentation.style.display = 'none';
+        document.getElementById("user-doc-button").innerText = "Need help filling out this form?";
+      }
+    };
 
   return (
     <div className="form-container">
@@ -135,7 +136,8 @@ const Form = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="message">Message (Please include <br></br>your unit address <br></br>in your message):</label>
+              <label htmlFor="message">Message:</label>
+              <h4 className="message-sub-heading">Please include your unit address in your message</h4>
               <textarea
                 id="message"
                 placeholder="Your message"
@@ -144,9 +146,6 @@ const Form = () => {
                 className="form-control"
               />
             </div>
-
-
-
 
             <hr></hr>
             <p id="warning">If your maintanence issue presents an immediate safety hazard (e.g. gas leak, building collapsing, etc.) contact the HRDC main office immediately at <b>(406) 587-4486</b>.</p>
