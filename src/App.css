@@ -3,7 +3,7 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 0;
   padding: 10px 20px 20px 60px; /* Adjusted padding for the logo */
-  background-image: url('Vines.svg'), url('hrdc-logo.png');
+  background-image: url('Vines.svg');
   background-attachment: fixed;
   background-position: center, 10px 10px; /* Adjusted background-position for the logo */
   background-repeat: no-repeat;
@@ -277,4 +277,11 @@ hr {
 #user_documentation {
   width: 70%;
   margin: 60px auto auto auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .landingPageText {
+    font-size: 1.5em;
+    text-align: right;
+  }
 }
