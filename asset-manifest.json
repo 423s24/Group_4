@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/HRDC%20Maintenance%20Request%20Form/static/css/main.fb9bd18b.css",
+    "main.js": "/HRDC%20Maintenance%20Request%20Form/static/js/main.3a8b95f9.js",
+    "static/js/453.a6dcc33e.chunk.js": "/HRDC%20Maintenance%20Request%20Form/static/js/453.a6dcc33e.chunk.js",
+    "static/media/Vines.svg": "/HRDC%20Maintenance%20Request%20Form/static/media/Vines.4f5f2b6f98a46ddd0bc0.svg",
+    "static/media/hrdc-logo.png": "/HRDC%20Maintenance%20Request%20Form/static/media/hrdc-logo.4147f9ad6b70e2358fbc.png",
+    "index.html": "/HRDC%20Maintenance%20Request%20Form/index.html",
+    "main.fb9bd18b.css.map": "/HRDC%20Maintenance%20Request%20Form/static/css/main.fb9bd18b.css.map",
+    "main.3a8b95f9.js.map": "/HRDC%20Maintenance%20Request%20Form/static/js/main.3a8b95f9.js.map",
+    "453.a6dcc33e.chunk.js.map": "/HRDC%20Maintenance%20Request%20Form/static/js/453.a6dcc33e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb9bd18b.css",
+    "static/js/main.3a8b95f9.js"
+  ]
+}
